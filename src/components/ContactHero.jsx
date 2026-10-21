@@ -38,9 +38,6 @@ export default function ContactHero({ onOpenBooking }) {
             <span className="text-gold-shine block text-xl sm:text-2xl lg:text-3xl">BOOKINGS, QUOTATIONS & ROUTES</span>
           </h1>
 
-          <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed max-w-lg">
-            Have questions about customized temple tours, outstation tariffs, or group coach rentals? Our team is available round the clock.
-          </p>
 
           {/* Action buttons */}
           <div className="flex flex-wrap items-center gap-3.5 pt-2">
