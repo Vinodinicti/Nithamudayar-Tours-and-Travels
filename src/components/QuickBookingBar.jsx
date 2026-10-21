@@ -23,19 +23,13 @@ export default function QuickBookingBar({ onOpenBooking }) {
           <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-80"></div>
           
           {/* Header Row */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 mb-5 border-b border-white/10">
-            <div className="space-y-0.5">
-              <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold block">
-                Instant Fare & Availability Calculator
-              </span>
-              <h2 className="text-base sm:text-lg font-bold font-heading text-white">
-                Check Tariff & Reserve Your Travel Route
-              </h2>
-            </div>
-            <div className="text-xs text-neutral-400 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              <span>All 38 Districts & South India Coverage</span>
-            </div>
+          <div className="pb-4 mb-5 border-b border-white/10 space-y-0.5">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold block">
+              Instant Fare & Availability Calculator
+            </span>
+            <h2 className="text-base sm:text-lg font-bold font-heading text-white">
+              Check Tariff & Reserve Your Travel Route
+            </h2>
           </div>
 
           {/* Booking Inputs Grid */}
