@@ -280,7 +280,7 @@ export default function AboutPage({ onOpenBooking }) {
                         <Icon className="w-5 h-5 sm:w-7 sm:h-7" />
                       </div>
 
-                      <h3 className="text-xs sm:text-base font-bold font-heading text-neutral-900 mb-1 sm:mb-1.5 group-hover:text-brand-gold-dark transition-colors line-clamp-1">
+                      <h3 className="text-xs sm:text-base font-bold font-heading text-neutral-900 mb-1 sm:mb-1.5 group-hover:text-brand-gold-dark transition-colors">
                         {val.title}
                       </h3>
 
