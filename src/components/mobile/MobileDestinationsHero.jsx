@@ -32,7 +32,7 @@ export default function MobileDestinationsHero({ onOpenBooking }) {
           <div className="absolute top-0 inset-x-0 h-[2px] bg-gradient-to-r from-transparent via-brand-gold to-transparent opacity-80"></div>
           <img
             src="/images/backgrounds/destinations-hero-full.jpg"
-            alt="Tamil Nadu Heritage Destinations Temple and Sacred Hill"
+            alt="Tamil Nadu Heritage Sacred Temple and Lotus Waters"
             className="w-full h-auto max-h-40 object-cover rounded-lg block drop-shadow-2xl"
           />
           <div className="flex items-center justify-between pt-1 px-1 text-[10px] text-neutral-400">
