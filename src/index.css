@@ -329,64 +329,6 @@
     overflow: hidden;
   }
 
-  @media (max-width: 768px) {
-    .uiverse-destination-container {
-      flex-direction: column;
-      height: auto;
-      min-height: auto;
-      gap: 8px;
-      padding: 0.5rem;
-    }
-
-    .uiverse-destination-item {
-      height: 52px;
-      min-height: 52px;
-      flex: none;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .uiverse-destination-item:hover,
-    .uiverse-destination-item.is-expanded {
-      height: auto;
-      min-height: auto;
-      flex: none;
-    }
-
-    .uiverse-destination-item .collapsed-label {
-      transform: rotate(0deg);
-      min-width: auto;
-      font-size: 0.85rem;
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .uiverse-destination-item:hover .collapsed-label,
-    .uiverse-destination-item.is-expanded .collapsed-label {
-      display: none;
-      opacity: 0;
-    }
-
-    .uiverse-destination-item .expanded-content {
-      position: relative;
-      inset: auto;
-      padding: 1.15rem 1rem;
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      min-height: auto;
-    }
-
-    .uiverse-destination-item:hover .expanded-content,
-    .uiverse-destination-item.is-expanded .expanded-content {
-      display: flex;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
   .uiverse-destination-item {
     position: relative;
     height: 100%;
@@ -455,6 +397,63 @@
   .uiverse-destination-item.is-expanded .expanded-content {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* Mobile Responsive Overrides: cleanly placed AFTER base styles so they take precedence */
+  @media (max-width: 768px) {
+    .uiverse-destination-container {
+      flex-direction: column;
+      height: auto;
+      min-height: auto;
+      gap: 8px;
+      padding: 0.5rem;
+    }
+
+    .uiverse-destination-item {
+      height: 54px;
+      min-height: 54px;
+      flex: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .uiverse-destination-item.is-expanded {
+      height: auto;
+      min-height: auto;
+      flex: none;
+    }
+
+    .uiverse-destination-item .collapsed-label {
+      transform: none;
+      min-width: auto;
+      font-size: 0.85rem;
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.1em;
+    }
+
+    .uiverse-destination-item.is-expanded .collapsed-label {
+      display: none;
+      opacity: 0;
+    }
+
+    .uiverse-destination-item .expanded-content {
+      position: relative;
+      inset: auto;
+      padding: 1.15rem 1rem;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      min-height: auto;
+    }
+
+    .uiverse-destination-item.is-expanded .expanded-content {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 

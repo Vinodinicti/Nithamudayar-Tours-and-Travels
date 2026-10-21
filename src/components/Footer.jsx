@@ -48,36 +48,36 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
 
   return (
     <footer className="bg-[#241815] text-neutral-300 border-t border-brand-gold/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 pt-8 sm:pt-16 pb-6 sm:pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 pt-6 sm:pt-16 pb-4 sm:pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-10">
           
           {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
-            <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
+          <div className="lg:col-span-2 space-y-2 sm:space-y-4">
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
               <img
                 src="/logo.png"
                 alt="Nithamudayar Tours and Travels Logo"
-                className="w-10 h-10 sm:w-14 sm:h-14 object-contain drop-shadow-md transition-transform duration-200 group-hover:scale-105"
+                className="w-9 h-9 sm:w-14 sm:h-14 object-contain drop-shadow-md transition-transform duration-200 group-hover:scale-105"
               />
               <div>
-                <span className="font-heading font-extrabold text-base sm:text-lg tracking-wider text-white">
+                <span className="font-heading font-extrabold text-sm sm:text-lg tracking-wider text-white">
                   NITHAMUDAYAR
                 </span>
-                <p className="text-[9px] sm:text-[10px] tracking-wider text-brand-gold uppercase font-semibold">
+                <p className="text-[8px] sm:text-[10px] tracking-wider text-brand-gold uppercase font-semibold">
                   Tours & Travels
                 </p>
               </div>
             </Link>
 
-            <p className="text-xs leading-relaxed text-neutral-400 pr-0 sm:pr-6">
+            <p className="text-[11px] sm:text-xs leading-snug sm:leading-relaxed text-neutral-400 pr-0 sm:pr-6">
               Registered tourist and charter operator across Tamil Nadu. Providing reliable luxury bus charters, tempo travellers, and tourist cabs for temple circuits, family holidays, and group travel.
             </p>
 
-            <div className="pt-1">
-              <p className="text-[10px] sm:text-[11px] font-semibold text-neutral-300 uppercase tracking-wider mb-2">
+            <div className="pt-0.5 sm:pt-1">
+              <p className="text-[9px] sm:text-[11px] font-semibold text-neutral-300 uppercase tracking-wider mb-1.5 sm:mb-2">
                 Connect With Us
               </p>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5 sm:gap-2">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -85,9 +85,9 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="w-7 h-7 sm:w-8 sm:h-8 rounded bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-brand-gold hover:border-brand-gold transition-colors"
+                    className="w-6 h-6 sm:w-8 sm:h-8 rounded bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-brand-gold hover:border-brand-gold transition-colors"
                   >
-                    {social.icon}
+                    {React.cloneElement(social.icon, { className: 'w-3 h-3 sm:w-4 sm:h-4 fill-current' })}
                   </a>
                 ))}
               </div>
@@ -95,13 +95,13 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
           </div>
 
           {/* Navigation & Key Locations (Side-by-side 2-col on mobile, separate columns on desktop) */}
-          <div className="grid grid-cols-2 gap-4 md:contents">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:contents">
             {/* Navigation Links */}
-            <div className="space-y-2 sm:space-y-3">
-              <h4 className="text-xs sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1.5 inline-block">
+            <div className="space-y-1.5 sm:space-y-3">
+              <h4 className="text-[11px] sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1 sm:pb-1.5 inline-block">
                 Navigation
               </h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs text-neutral-400">
+              <ul className="space-y-1 sm:space-y-2 text-[11px] sm:text-xs text-neutral-400">
                 <li>
                   <Link to="/" className="hover:text-brand-gold transition-colors">Home</Link>
                 </li>
@@ -124,11 +124,11 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
             </div>
 
             {/* Key Locations */}
-            <div className="space-y-2 sm:space-y-3">
-              <h4 className="text-xs sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1.5 inline-block">
+            <div className="space-y-1.5 sm:space-y-3">
+              <h4 className="text-[11px] sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1 sm:pb-1.5 inline-block">
                 Key Locations
               </h4>
-              <ul className="space-y-1.5 sm:space-y-2 text-xs text-neutral-400">
+              <ul className="space-y-1 sm:space-y-2 text-[11px] sm:text-xs text-neutral-400">
                 <li>
                   <Link to="/destinations" className="hover:text-white transition-colors">Thanjavur</Link>
                 </li>
@@ -152,29 +152,29 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
           </div>
 
           {/* Office Contact */}
-          <div className="space-y-2.5 sm:space-y-3">
-            <h4 className="text-xs sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1.5 inline-block">
+          <div className="space-y-2 sm:space-y-3">
+            <h4 className="text-[11px] sm:text-sm font-bold font-heading text-white border-b border-brand-gold/30 pb-1 sm:pb-1.5 inline-block">
               Contact Desk
             </h4>
-            <div className="space-y-2 text-xs text-neutral-400">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
+            <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs text-neutral-400">
+              <div className="flex items-start gap-1.5 sm:gap-2">
+                <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-gold shrink-0 mt-0.5" />
                 <span>Tamil Nadu & South India</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-gold shrink-0" />
                 <a href="tel:+919894116405" className="hover:text-white transition-colors font-semibold text-neutral-200">
                   +91 98941 16405
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Mail className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-brand-gold shrink-0" />
                 <a href="mailto:booking@nithamudayartravels.com" className="hover:text-white transition-colors">
                   booking@nithamudayartravels.com
                 </a>
               </div>
-              <div className="flex items-center gap-2 pt-0.5 text-brand-gold">
-                <Clock className="w-3.5 h-3.5 shrink-0" />
+              <div className="flex items-center gap-1.5 sm:gap-2 pt-0.5 text-brand-gold">
+                <Clock className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0" />
                 <span>24/7 Service Available</span>
               </div>
             </div>
@@ -184,8 +184,8 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
       </div>
 
       {/* Copyright */}
-      <div className="border-t border-white/5 bg-[#1a110e] py-3 px-4 sm:px-10">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs text-neutral-500 text-center sm:text-left">
+      <div className="border-t border-white/5 bg-[#1a110e] py-2.5 sm:py-3 px-4 sm:px-10">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2.5 text-[10px] sm:text-xs text-neutral-500 text-center sm:text-left">
           <p>© {new Date().getFullYear()} Nithamudayar Tours and Travels. All rights reserved.</p>
           <div className="flex items-center gap-3">
             <button
