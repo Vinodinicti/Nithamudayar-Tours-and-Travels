@@ -266,26 +266,50 @@ export default function AboutPage({ onOpenBooking }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {coreValues.map((val, idx) => {
               const Icon = val.icon;
               return (
                 <div
                   key={idx}
-                  className="bg-[#FAF8F5] border border-neutral-200 rounded-xl p-3.5 sm:p-6 flex flex-col justify-between hover:border-brand-gold-dark hover:bg-white transition-all duration-300 shadow-sm active:scale-95 group"
+                  className="guarantee-card group p-6 sm:p-7 relative"
                 >
-                  <div>
-                    <div className="text-brand-gold-dark mb-2 sm:mb-3.5 group-hover:scale-110 transition-transform">
-                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
+                  {/* Top Gold Shimmer Line on Hover */}
+                  <div className="shimmer-line"></div>
+
+                  {/* Watermark Step Number in Background */}
+                  <span className="absolute top-4 right-5 text-4xl sm:text-5xl font-black font-heading text-neutral-100 group-hover:text-brand-gold/20 transition-colors duration-300 pointer-events-none select-none">
+                    0{idx + 1}
+                  </span>
+
+                  <div className="relative z-10 space-y-4 flex-1 flex flex-col justify-between">
+                    <div>
+                      {/* Animated Floating Icon Aura */}
+                      <div className="w-12 h-12 rounded-xl bg-brand-gold/10 border border-brand-gold/25 flex items-center justify-center text-brand-gold-dark group-hover:bg-gradient-to-br group-hover:from-brand-gold group-hover:to-brand-gold-dark group-hover:text-neutral-950 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-md transition-all duration-300 mb-4">
+                        <Icon className="w-6 h-6 transition-transform" />
+                      </div>
+
+                      {/* Highlight Badge */}
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-brand-gold-dark bg-brand-gold/10 px-2.5 py-0.5 rounded-full border border-brand-gold/20 mb-2">
+                        {val.highlight}
+                      </span>
+
+                      {/* Title */}
+                      <h3 className="text-base sm:text-lg font-bold font-heading text-neutral-900 group-hover:text-brand-gold-dark transition-colors duration-300 leading-snug">
+                        {val.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed mt-2">
+                        {val.desc}
+                      </p>
                     </div>
 
-                    <h3 className="text-xs sm:text-base font-bold font-heading text-neutral-900 mb-1 sm:mb-1.5 group-hover:text-brand-gold-dark transition-colors line-clamp-1">
-                      {val.title}
-                    </h3>
-
-                    <p className="text-[10px] sm:text-xs text-neutral-600 leading-snug sm:leading-relaxed line-clamp-2">
-                      {val.desc}
-                    </p>
+                    {/* Subtle Bottom Accent Indicator */}
+                    <div className="pt-3 border-t border-neutral-100 flex items-center gap-1.5 text-[11px] font-semibold text-neutral-400 group-hover:text-brand-gold-dark transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-gold-dark group-hover:scale-125 transition-transform"></span>
+                      <span>Verified Standard</span>
+                    </div>
                   </div>
                 </div>
               );
