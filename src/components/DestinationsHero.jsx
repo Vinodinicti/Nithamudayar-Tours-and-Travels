@@ -17,12 +17,12 @@ export default function DestinationsHero({ onOpenBooking }) {
         backgroundImage: `url('/images/backgrounds/destinations-hero-landscape.jpg')`,
       }}
     >
-      {/* Soft gradient blend: pleasant light brown tint on mobile view alone, rich blend on desktop */}
-      <div className="absolute inset-0 sm:inset-y-0 sm:left-0 sm:w-3/5 lg:w-1/2 bg-gradient-to-r from-[#352016]/55 via-[#352016]/30 to-transparent sm:from-[#352016] sm:via-[#352016]/85 sm:to-transparent pointer-events-none z-10"></div>
+      {/* Soft gradient blend: light transparent tint on mobile view alone, rich blend on desktop */}
+      <div className="absolute inset-0 sm:inset-y-0 sm:left-0 sm:w-3/5 lg:w-1/2 bg-gradient-to-r from-[#352016]/40 via-[#352016]/20 to-transparent sm:from-[#352016] sm:via-[#352016]/85 sm:to-transparent pointer-events-none z-10"></div>
 
-      {/* Subtle top/bottom vignette: balanced h-12 brown shade on mobile view alone */}
-      <div className="absolute inset-x-0 top-0 h-12 sm:h-16 bg-gradient-to-b from-[#352016]/55 sm:from-[#352016]/80 to-transparent pointer-events-none z-10"></div>
-      <div className="absolute inset-x-0 bottom-0 h-12 sm:h-14 bg-gradient-to-t from-[#352016]/50 sm:from-[#352016]/80 to-transparent pointer-events-none z-10"></div>
+      {/* Subtle top/bottom vignette: light on mobile view alone */}
+      <div className="absolute inset-x-0 top-0 h-10 sm:h-16 bg-gradient-to-b from-[#352016]/30 sm:from-[#352016]/80 to-transparent pointer-events-none z-10"></div>
+      <div className="absolute inset-x-0 bottom-0 h-10 sm:h-14 bg-gradient-to-t from-[#352016]/30 sm:from-[#352016]/80 to-transparent pointer-events-none z-10"></div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-10 w-full">
         {/* Left Content */}
