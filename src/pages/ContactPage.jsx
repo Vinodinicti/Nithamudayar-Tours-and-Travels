@@ -87,10 +87,10 @@ export default function ContactPage({ onOpenBooking }) {
               <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-gold-dark block">
                 Direct Reservation
               </span>
-              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5 line-clamp-1">
+              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5">
                 24/7 Hotline
               </h3>
-              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed line-clamp-2">
+              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed">
                 Immediate vehicle dispatch & on-call assistance.
               </p>
             </div>
@@ -119,10 +119,10 @@ export default function ContactPage({ onOpenBooking }) {
               <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-gold-dark block">
                 Instant Chat
               </span>
-              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5 line-clamp-1">
+              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5">
                 WhatsApp Desk
               </h3>
-              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed line-clamp-2">
+              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed">
                 Vehicle photos, quotes & live driver tracking.
               </p>
             </div>
@@ -151,19 +151,19 @@ export default function ContactPage({ onOpenBooking }) {
               <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-gold-dark block">
                 Written Quotation
               </span>
-              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5 line-clamp-1">
+              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5">
                 Email Desk
               </h3>
-              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed line-clamp-2">
+              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed">
                 Send itineraries, bus charters & billing specs.
               </p>
             </div>
             <div className="pt-2.5 sm:pt-4 mt-2 sm:mt-3 border-t border-neutral-100 flex items-center justify-between">
               <a
                 href="mailto:booking@nithamudayartravels.com"
-                className="text-[10px] sm:text-xs font-bold text-neutral-900 hover:text-brand-gold-dark flex items-center gap-1 transition-colors truncate max-w-[130px] sm:max-w-[190px]"
+                className="text-[10px] sm:text-xs font-bold text-neutral-900 hover:text-brand-gold-dark flex items-center gap-1 transition-colors"
               >
-                <span className="truncate">Email Team</span>
+                <span>Email Team</span>
                 <ArrowRight className="w-3 h-3 text-brand-gold-dark shrink-0" />
               </a>
             </div>
@@ -178,10 +178,10 @@ export default function ContactPage({ onOpenBooking }) {
               <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider text-brand-gold-dark block">
                 Primary Depot
               </span>
-              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5 line-clamp-1">
+              <h3 className="text-xs sm:text-base font-extrabold font-heading text-neutral-900 mt-0.5">
                 Depot & Hubs
               </h3>
-              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed line-clamp-2">
+              <p className="text-[10px] sm:text-xs text-neutral-600 mt-0.5 sm:mt-1 leading-snug sm:leading-relaxed">
                 Trichy, Kumbakonam, Madurai, Coimbatore & Chennai.
               </p>
             </div>

@@ -169,7 +169,7 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenBooking }) {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-brand-gold shrink-0" />
-                <a href="mailto:booking@nithamudayartravels.com" className="hover:text-white transition-colors truncate">
+                <a href="mailto:booking@nithamudayartravels.com" className="hover:text-white transition-colors">
                   booking@nithamudayartravels.com
                 </a>
               </div>

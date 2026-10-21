@@ -163,7 +163,7 @@ export default function HomePage({ onOpenBooking }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-5 text-white">
-                  <span className="text-[9px] sm:text-[11px] font-semibold text-brand-gold uppercase tracking-wider block mb-0.5 line-clamp-1">
+                  <span className="text-[9px] sm:text-[11px] font-semibold text-brand-gold uppercase tracking-wider block mb-0.5">
                     {d.tag}
                   </span>
                   <h3 className="text-base sm:text-2xl font-bold font-heading group-hover:text-gold-shine transition-colors">
@@ -232,7 +232,7 @@ export default function HomePage({ onOpenBooking }) {
                     />
 
                     {/* Category Pill Tag */}
-                    <div className="absolute top-2 left-2 z-20 bg-black/85 backdrop-blur-md px-1.5 sm:px-2.5 py-0.5 rounded text-[8px] sm:text-[10px] font-bold text-brand-gold border border-brand-gold/30 line-clamp-1 max-w-[85px] sm:max-w-none">
+                    <div className="absolute top-2 left-2 z-20 bg-black/85 backdrop-blur-md px-1.5 sm:px-2.5 py-0.5 rounded text-[8px] sm:text-[10px] font-bold text-brand-gold border border-brand-gold/30">
                       {veh.category}
                     </div>
 
@@ -244,10 +244,10 @@ export default function HomePage({ onOpenBooking }) {
 
                   {/* Card Content */}
                   <div className="p-3 sm:p-5 space-y-1 sm:space-y-2">
-                    <h3 className="text-xs sm:text-base font-bold font-heading text-white group-hover:text-brand-gold transition-colors line-clamp-1">
+                    <h3 className="text-xs sm:text-base font-bold font-heading text-white group-hover:text-brand-gold transition-colors">
                       {veh.name}
                     </h3>
-                    <p className="text-[10px] sm:text-xs text-neutral-400 leading-snug sm:leading-relaxed line-clamp-2">
+                    <p className="text-[10px] sm:text-xs text-neutral-400 leading-snug sm:leading-relaxed">
                       {veh.desc}
                     </p>
                   </div>

@@ -217,7 +217,7 @@ export default function PackagesPage({ onOpenBooking }) {
               <div
                 key={pkg.id}
                 onClick={() => toggleFlip(pkg.id)}
-                className="flip-card-perspective min-h-[475px] sm:h-[495px] cursor-pointer group"
+                className="flip-card-perspective min-h-[500px] sm:min-h-[520px] cursor-pointer group"
                 title="Click card to flip"
               >
                 <div className={`flip-card-inner ${flippedCards[pkg.id] ? 'is-flipped' : ''}`}>
@@ -249,7 +249,7 @@ export default function PackagesPage({ onOpenBooking }) {
 
                         {/* Bottom overlay tag */}
                         <div className="absolute bottom-2.5 left-3.5 right-3.5 text-white">
-                          <span className="text-[11px] font-semibold text-brand-gold uppercase tracking-wider block truncate">
+                          <span className="text-[11px] font-semibold text-brand-gold uppercase tracking-wider block">
                             {pkg.tag}
                           </span>
                         </div>
@@ -269,7 +269,7 @@ export default function PackagesPage({ onOpenBooking }) {
                           </span>
                         </div>
 
-                        <h3 className="text-sm sm:text-base font-bold font-heading text-neutral-900 group-hover:text-brand-gold-dark transition-colors line-clamp-2">
+                        <h3 className="text-sm sm:text-base font-bold font-heading text-neutral-900 group-hover:text-brand-gold-dark transition-colors">
                           {pkg.title}
                         </h3>
                         
@@ -280,7 +280,7 @@ export default function PackagesPage({ onOpenBooking }) {
 
                         <div className="text-[11px] text-neutral-500 font-medium flex items-center gap-1.5 pt-1">
                           <Check className="w-3 h-3 text-brand-gold-dark shrink-0" />
-                          <span className="truncate">{pkg.includes}</span>
+                          <span>{pkg.includes}</span>
                         </div>
 
                         {/* Subtle Card Flip Prompt */}
@@ -335,7 +335,7 @@ export default function PackagesPage({ onOpenBooking }) {
                         <span className="text-[10px] font-bold uppercase tracking-widest text-brand-gold-dark block">
                           Route Itinerary
                         </span>
-                        <h4 className="text-sm font-bold font-heading text-neutral-900 line-clamp-1">
+                        <h4 className="text-sm font-bold font-heading text-neutral-900">
                           Key Stops & Highlights
                         </h4>
                       </div>
@@ -362,7 +362,7 @@ export default function PackagesPage({ onOpenBooking }) {
                     <div className="pt-2 border-t border-neutral-200/90 space-y-2.5 pb-1">
                       <div className="text-[11px] text-neutral-500 font-medium flex items-center gap-1.5">
                         <Check className="w-3 h-3 text-brand-gold-dark shrink-0" />
-                        <span className="truncate">{pkg.includes}</span>
+                        <span>{pkg.includes}</span>
                       </div>
 
                       <div className="flex items-center gap-2">

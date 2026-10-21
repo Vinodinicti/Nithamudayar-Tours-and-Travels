@@ -14,7 +14,7 @@ export default function FleetHero({ onOpenBooking }) {
       id="fleet-hero" 
       className="relative w-full pt-28 sm:pt-36 pb-14 sm:pb-20 bg-[#352016] text-white overflow-hidden bg-cover bg-[position:65%_center] sm:bg-right lg:bg-center bg-no-repeat min-h-[460px] sm:min-h-[520px] flex items-center"
       style={{
-        backgroundImage: `url('/hero-bg-full.png')`,
+        backgroundImage: `url('/images/backgrounds/fleet-hero-landscape.jpg')`,
       }}
     >
       {/* Soft gradient blend so typography is ultra-crisp and legible on mobile and desktop */}

@@ -220,7 +220,7 @@ export default function DestinationsPage({ onOpenBooking }) {
                           {dest.subtitle}
                         </p>
 
-                        <p className="text-xs text-neutral-300 leading-relaxed mt-2.5 line-clamp-3 sm:line-clamp-4">
+                        <p className="text-xs text-neutral-300 leading-relaxed mt-2.5">
                           {dest.description}
                         </p>
 
@@ -232,8 +232,8 @@ export default function DestinationsPage({ onOpenBooking }) {
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-200">
                             {dest.attractions.map((att, i) => (
                               <div key={i} className="flex items-center gap-1.5">
-                                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold shrink-0"></span>
-                                <span className="truncate">{att}</span>
+                                <span className="text-brand-gold font-bold text-xs select-none">›</span>
+                                <span>{att}</span>
                               </div>
                             ))}
                           </div>
@@ -289,7 +289,7 @@ export default function DestinationsPage({ onOpenBooking }) {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25 pointer-events-none"></div>
 
                       {/* Category Tag Top Left */}
-                      <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-[#241815]/90 backdrop-blur-md text-brand-gold text-[8px] sm:text-[11px] font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-brand-gold/30 shadow-sm line-clamp-1 max-w-[85px] sm:max-w-none">
+                      <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-[#241815]/90 backdrop-blur-md text-brand-gold text-[8px] sm:text-[11px] font-bold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border border-brand-gold/30 shadow-sm">
                         {dest.tag}
                       </div>
 
@@ -298,7 +298,7 @@ export default function DestinationsPage({ onOpenBooking }) {
                         <h3 className="text-base sm:text-xl font-extrabold font-heading text-white drop-shadow-md">
                           {dest.city}
                         </h3>
-                        <p className="text-[10px] sm:text-[11px] font-medium text-brand-gold truncate">
+                        <p className="text-[10px] sm:text-[11px] font-medium text-brand-gold">
                           {dest.subtitle}
                         </p>
                       </div>
@@ -306,7 +306,7 @@ export default function DestinationsPage({ onOpenBooking }) {
 
                     {/* Content Section */}
                     <div className="p-3 sm:p-5 space-y-2 sm:space-y-3.5">
-                      <p className="text-[11px] sm:text-xs text-neutral-600 leading-snug sm:leading-relaxed line-clamp-2">
+                      <p className="text-[11px] sm:text-xs text-neutral-600 leading-snug sm:leading-relaxed">
                         {dest.description}
                       </p>
 
@@ -319,7 +319,7 @@ export default function DestinationsPage({ onOpenBooking }) {
                           {dest.attractions.slice(0, 2).map((att, idx) => (
                             <span 
                               key={idx} 
-                              className="text-[9px] sm:text-[11px] bg-neutral-100/90 text-neutral-700 px-1.5 sm:px-2.5 py-0.5 rounded-md border border-neutral-200/80 truncate max-w-full"
+                              className="text-[9px] sm:text-[11px] bg-neutral-100/90 text-neutral-700 px-1.5 sm:px-2.5 py-0.5 rounded-md border border-neutral-200/80"
                             >
                               {att.split('(')[0].trim()}
                             </span>
@@ -328,11 +328,11 @@ export default function DestinationsPage({ onOpenBooking }) {
                       </div>
 
                       {/* Season & Fleet Summary */}
-                      <div className="pt-1.5 sm:pt-2 border-t border-neutral-100 flex items-center justify-between text-[10px] sm:text-[11px] text-neutral-500 gap-1.5 sm:gap-2">
-                        <span className="truncate">
+                      <div className="pt-1.5 sm:pt-2 border-t border-neutral-100 flex flex-wrap items-center justify-between text-[10px] sm:text-[11px] text-neutral-500 gap-1.5 sm:gap-2">
+                        <span>
                           <strong className="text-neutral-700 font-semibold">Season:</strong> {dest.bestTime}
                         </span>
-                        <span className="truncate">
+                        <span>
                           <strong className="text-neutral-700 font-semibold">Fleet:</strong> {dest.recommendedVehicle.split(',')[0].trim()}
                         </span>
                       </div>
@@ -363,8 +363,8 @@ export default function DestinationsPage({ onOpenBooking }) {
           <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#241815] via-[#1c1210] to-[#2e1d18] border border-brand-gold/30 p-5 sm:p-12 overflow-hidden shadow-2xl group hover:border-brand-gold/60 transition-all duration-500">
             
             {/* 1. Ambient Golden Radial Glows */}
-            <div className="absolute -top-24 -left-24 w-72 h-72 bg-brand-gold/15 rounded-full blur-[90px] pointer-events-none animate-pulse-glow"></div>
-            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none animate-pulse-glow" style={{ animationDelay: '1.5s' }}></div>
+            <div className="absolute -top-24 -left-24 w-72 h-72 bg-brand-gold/15 rounded-full blur-[90px] pointer-events-none"></div>
+            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-brand-gold/10 rounded-full blur-[100px] pointer-events-none"></div>
 
             {/* 2. Animated SVG Golden Route Network Graphic in the background */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-35 sm:opacity-45">
@@ -385,15 +385,10 @@ export default function DestinationsPage({ onOpenBooking }) {
                 <path d="M 100,240 Q 400,280 650,180 T 980,80" fill="none" stroke="rgba(212,175,55,0.15)" strokeWidth="1.5" />
                 <path d="M 100,240 Q 400,280 650,180 T 980,80" fill="none" stroke="url(#routeGradient)" strokeWidth="2" strokeDasharray="10 14" className="animate-route-flow" style={{ animationDuration: '3.5s' }} />
 
-                {/* Waypoint Nodes with expanding radar rings */}
-                <circle cx="250" cy="98" r="4" fill="#D4AF37" />
-                <circle cx="250" cy="98" r="14" fill="none" stroke="#D4AF37" strokeWidth="1" className="animate-ping" style={{ transformOrigin: '250px 98px', animationDuration: '3s' }} />
-
-                <circle cx="500" cy="160" r="4" fill="#D4AF37" />
-                <circle cx="500" cy="160" r="16" fill="none" stroke="#D4AF37" strokeWidth="1" className="animate-ping" style={{ transformOrigin: '500px 160px', animationDuration: '2.5s', animationDelay: '1s' }} />
-
-                <circle cx="780" cy="148" r="4" fill="#D4AF37" />
-                <circle cx="780" cy="148" r="14" fill="none" stroke="#D4AF37" strokeWidth="1" className="animate-ping" style={{ transformOrigin: '780px 148px', animationDuration: '3.2s', animationDelay: '1.8s' }} />
+                {/* Clean Static Waypoint Nodes (Zero Blinking) */}
+                <circle cx="250" cy="98" r="3.5" fill="#D4AF37" />
+                <circle cx="500" cy="160" r="3.5" fill="#D4AF37" />
+                <circle cx="780" cy="148" r="3.5" fill="#D4AF37" />
               </svg>
             </div>
 
@@ -404,9 +399,9 @@ export default function DestinationsPage({ onOpenBooking }) {
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               
               <div className="space-y-3.5 max-w-2xl">
-                {/* Status Pill with Pulsing Dot */}
+                {/* Status Pill with Static Icon */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/30 text-brand-gold text-[11px] font-bold tracking-wider uppercase">
-                  <span className="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
+                  <Sparkles className="w-3 h-3 text-brand-gold" />
                   <span>Custom Routes & Inter-District Charters</span>
                 </div>
 
@@ -418,21 +413,18 @@ export default function DestinationsPage({ onOpenBooking }) {
                   We operate across all 38 districts of Tamil Nadu, Pondicherry, and South India. Design your bespoke multi-city circuit with transparent fixed tariffs.
                 </p>
 
-                {/* Animated Waypoint Route Highlights */}
-                <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] text-neutral-300">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    <span>Any Pickup Hub</span>
+                {/* Waypoint Route Highlights without colored dots */}
+                <div className="flex flex-wrap items-center gap-2 pt-1 text-[11px] font-medium text-neutral-300">
+                  <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+                    Any Pickup Hub
                   </span>
                   <span className="text-brand-gold font-bold">→</span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold"></span>
-                    <span>Custom Waypoints</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+                    Custom Waypoints
                   </span>
                   <span className="text-brand-gold font-bold">→</span>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-                    <span>Any Destination</span>
+                  <span className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white">
+                    Any Destination
                   </span>
                 </div>
               </div>

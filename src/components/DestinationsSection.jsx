@@ -90,7 +90,7 @@ export default function DestinationsSection({ onSelectCity }) {
                   {dest.city}
                 </h3>
 
-                <p className="text-xs text-neutral-300 line-clamp-1">
+                <p className="text-xs text-neutral-300 leading-relaxed">
                   {dest.attractions.join(' • ')}
                 </p>
 

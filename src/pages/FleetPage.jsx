@@ -160,13 +160,13 @@ export default function FleetPage({ onOpenBooking }) {
                     </span>
                     <Car className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-400 group-hover:text-brand-gold-dark transition-colors" />
                   </div>
-                  <h3 className="text-xs sm:text-base font-bold font-heading text-neutral-900 group-hover:text-brand-gold-dark transition-colors line-clamp-1">
+                  <h3 className="text-xs sm:text-base font-bold font-heading text-neutral-900 group-hover:text-brand-gold-dark transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-[11px] sm:text-xs font-semibold text-neutral-700 line-clamp-1">
+                  <p className="text-[11px] sm:text-xs font-semibold text-neutral-700">
                     {item.model}
                   </p>
-                  <p className="text-[10px] sm:text-xs text-neutral-500 leading-snug sm:leading-relaxed line-clamp-2">
+                  <p className="text-[10px] sm:text-xs text-neutral-500 leading-snug sm:leading-relaxed">
                     {item.bestFor}
                   </p>
                 </div>
@@ -290,7 +290,7 @@ export default function FleetPage({ onOpenBooking }) {
                           <Users className="w-3.5 h-3.5 shrink-0" />
                           <span className="text-[10px] uppercase font-bold text-neutral-400">Seats</span>
                         </div>
-                        <span className="font-semibold text-white truncate">{item.seats}</span>
+                        <span className="font-semibold text-white">{item.seats}</span>
                       </div>
 
                       <div className="bg-[#1f1310] border border-white/5 hover:border-brand-gold/40 rounded-lg p-2.5 transition-colors flex flex-col gap-1">
@@ -298,7 +298,7 @@ export default function FleetPage({ onOpenBooking }) {
                           <Briefcase className="w-3.5 h-3.5 shrink-0" />
                           <span className="text-[10px] uppercase font-bold text-neutral-400">Luggage</span>
                         </div>
-                        <span className="font-semibold text-white truncate">{item.luggage}</span>
+                        <span className="font-semibold text-white">{item.luggage}</span>
                       </div>
 
                       <div className="bg-[#1f1310] border border-white/5 hover:border-brand-gold/40 rounded-lg p-2.5 transition-colors flex flex-col gap-1">
@@ -306,7 +306,7 @@ export default function FleetPage({ onOpenBooking }) {
                           <Wind className="w-3.5 h-3.5 shrink-0" />
                           <span className="text-[10px] uppercase font-bold text-neutral-400">Comfort</span>
                         </div>
-                        <span className="font-semibold text-white truncate">{item.ac}</span>
+                        <span className="font-semibold text-white">{item.ac}</span>
                       </div>
                     </div>
 
@@ -405,7 +405,7 @@ export default function FleetPage({ onOpenBooking }) {
                         {/* Vehicle Category */}
                         <td className="py-4 px-5 font-bold text-neutral-900 border-r border-neutral-100">
                           <div className="flex items-center gap-2.5">
-                            <span className="w-2 h-2 rounded-full bg-brand-gold-dark shrink-0"></span>
+                            <Car className="w-4 h-4 text-brand-gold-dark shrink-0" />
                             <span className="text-sm font-semibold">{t.vehicle}</span>
                           </div>
                         </td>
