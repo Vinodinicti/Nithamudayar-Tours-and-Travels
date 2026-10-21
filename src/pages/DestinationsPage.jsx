@@ -213,23 +213,23 @@ export default function DestinationsPage({ onOpenBooking }) {
                         </div>
 
                         {/* Title & Subtitle */}
-                        <h3 className="text-2xl sm:text-3xl font-extrabold font-heading text-white">
+                        <h3 className="text-xl sm:text-3xl font-extrabold font-heading text-white">
                           {dest.city}
                         </h3>
                         <p className="text-xs font-semibold text-brand-gold mt-0.5">
                           {dest.subtitle}
                         </p>
 
-                        <p className="text-xs text-neutral-300 leading-relaxed mt-2.5">
+                        <p className="text-xs text-neutral-300 leading-relaxed mt-2 sm:mt-2.5">
                           {dest.description}
                         </p>
 
                         {/* Signature Landmarks */}
-                        <div className="mt-4 pt-3 border-t border-white/10">
-                          <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block mb-2">
+                        <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-white/10">
+                          <span className="text-[10px] font-bold uppercase tracking-widest text-neutral-400 block mb-1.5 sm:mb-2">
                             Signature Landmarks & Heritage
                           </span>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-200">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2 text-xs text-neutral-200">
                             {dest.attractions.map((att, i) => (
                               <div key={i} className="flex items-center gap-1.5">
                                 <span className="text-brand-gold font-bold text-xs select-none">›</span>
@@ -240,20 +240,20 @@ export default function DestinationsPage({ onOpenBooking }) {
                         </div>
 
                         {/* Best Season & Vehicles */}
-                        <div className="mt-3 pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-neutral-400">
+                        <div className="mt-2.5 sm:mt-3 pt-2.5 sm:pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] text-neutral-400">
                           <span><strong className="text-neutral-200">Best Time:</strong> {dest.bestTime}</span>
                           <span><strong className="text-neutral-200">Ideal Fleet:</strong> {dest.recommendedVehicle.split(',')[0]}</span>
                         </div>
                       </div>
 
                       {/* Direct Booking CTA */}
-                      <div className="pt-3">
+                      <div className="pt-3 sm:pt-4">
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             onOpenBooking({ destinationCity: dest.city });
                           }}
-                          className="btn-gold px-5 py-2.5 rounded-lg text-xs font-bold inline-flex items-center gap-2 cursor-pointer shadow-md group/btn"
+                          className="btn-gold px-5 py-2.5 rounded-lg text-xs font-bold inline-flex items-center justify-center gap-2 cursor-pointer shadow-md group/btn w-full sm:w-auto"
                         >
                           <span>Plan Journey to {dest.city}</span>
                           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1.5 transition-transform" />

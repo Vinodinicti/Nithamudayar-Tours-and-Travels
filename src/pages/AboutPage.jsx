@@ -205,39 +205,43 @@ export default function AboutPage({ onOpenBooking }) {
 
         <div className="relative z-10 max-w-7xl mx-auto">
           
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-2.5">
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-gold block">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-16 space-y-2 sm:space-y-2.5">
+            <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-brand-gold block">
               Effortless Booking
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-heading text-white">
               How Easy It Is to Travel With Us
             </h2>
-            <p className="text-xs sm:text-sm text-neutral-300">
+            <p className="text-[11px] sm:text-sm text-neutral-300">
               No long forms or confusing steps. We get you on the road in 3 easy steps.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
             {steps.map((st, i) => (
               <div
                 key={i}
-                className="bg-[#2a1c18] border border-brand-gold/30 rounded-xl p-7 sm:p-8 hover:border-brand-gold transition-colors flex flex-col justify-between shadow-lg"
+                className={`bg-[#2a1c18] border border-brand-gold/30 rounded-xl p-3.5 sm:p-7 md:p-8 hover:border-brand-gold transition-colors flex flex-col justify-between shadow-lg ${
+                  i === 2 
+                    ? 'col-span-2 md:col-span-1 w-full max-w-xs md:max-w-none mx-auto' 
+                    : ''
+                }`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold tracking-widest text-brand-gold uppercase">
+                  <div className="flex items-center justify-between mb-2 sm:mb-4">
+                    <span className="text-[10px] sm:text-xs font-mono font-bold tracking-widest text-brand-gold uppercase">
                       Step {st.step}
                     </span>
-                    <span className="text-2xl font-bold font-heading text-brand-gold/30">
+                    <span className="text-lg sm:text-2xl font-bold font-heading text-brand-gold/30">
                       {st.step}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-heading text-white mb-2.5">
+                  <h3 className="text-xs sm:text-base md:text-lg font-bold font-heading text-white mb-1.5 sm:mb-2.5">
                     {st.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">
+                  <p className="text-[10px] sm:text-xs md:text-sm text-neutral-300 leading-snug sm:leading-relaxed">
                     {st.desc}
                   </p>
                 </div>
