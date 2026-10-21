@@ -209,42 +209,6 @@
     transform: scale(1.08);
   }
 
-  /* About Page Guarantee Luxury Card Animation */
-  .guarantee-card {
-    position: relative;
-    border-radius: 1.25rem;
-    background-color: #ffffff;
-    border: 1px solid rgba(229, 231, 235, 0.95);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.04);
-  }
-
-  .guarantee-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212, 175, 55, 0.75);
-    box-shadow: 0 24px 40px -12px rgba(212, 175, 55, 0.22), 0 10px 20px -6px rgba(53, 32, 22, 0.08);
-  }
-
-  .guarantee-card .shimmer-line {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #D4AF37, #FCF6BA, #AA771C, transparent);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 20;
-  }
-
-  .guarantee-card:hover .shimmer-line {
-    opacity: 1;
-  }
-
   /* 3D Flip Card System for Tour Packages */
   .flip-card-perspective {
     perspective: 1200px;
